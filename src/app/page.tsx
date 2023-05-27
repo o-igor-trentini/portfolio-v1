@@ -1,13 +1,17 @@
-import { Main } from '@/app/components/Home';
+import { Home } from '@/app/components/Home';
+import { NextPage } from 'next';
+import { ReactElement } from 'react';
 
-export default function Home() {
+const Page: NextPage = (): ReactElement => {
     return (
         <main>
-            <section className="bg-primary min-h-screen">
-                <Main />
+            <section className="bg-blayout min-h-screen flex content-center p-40">
+                <Home />
             </section>
 
-            <section className="bg-aux3 min-h-screen"></section>
+            <section className="bg-blayout-2 min-h-screen"></section>
         </main>
     );
-}
+};
+
+export default Page;
