@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 const Page: NextPage = (): ReactElement => {
     return (
         <main>
-            <section className="bg-blayout min-h-screen flex content-center p-40">
+            <section className="bg-blayout min-h-screen flex content-center p-4">
                 <Home />
             </section>
 
