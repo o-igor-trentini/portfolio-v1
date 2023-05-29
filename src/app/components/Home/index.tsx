@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const Home: FC = (): ReactElement => {
     return (
-        <div className="w-full mt-auto mb-auto flex lg:flex-row flex-col items-center lg:gap-0 gap-4 relative">
+        <div className="w-full flex lg:flex-row flex-col lg:justify-start justify-center items-center lg:gap-0 gap-4 relative">
             <div className="lg:absolute lg:z-10 2xl:left-[26rem] xl:left-[14rem] lg:left-[10rem]">
                 <Image
                     src={profilePng}

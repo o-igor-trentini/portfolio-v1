@@ -1,10 +1,13 @@
 import { Home } from '@/app/components/Home';
 import { NextPage } from 'next';
 import { ReactElement } from 'react';
+import { Menu } from '@/app/components/Menu';
 
 const Page: NextPage = (): ReactElement => {
     return (
-        <main>
+        <main className="relative">
+            <Menu />
+
             <section className="bg-blayout min-h-screen flex content-center p-4">
                 <Home />
             </section>
