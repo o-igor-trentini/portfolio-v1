@@ -42,8 +42,8 @@ export const Menu: FC = (): ReactElement => {
     ];
 
     return (
-        <div className="z-50 min-h-screen w-24 ml-16 fixed flex flex-col justify-center items-center">
-            <div className="w-full flex flex-col justify-center items-center gap-4 py-4 bg-fourth rounded-3xl">
+        <div className="md:fixed px-2 md:px-0 md:min-h-screen flex flex-col justify-center items-center">
+            <div className="w-full flex flex-row md:flex-col justify-center items-center gap-4 bg-fourth rounded-3xl p-4">
                 {items.map(({ id, label, icon, isActive }) => {
                     return (
                         <button
