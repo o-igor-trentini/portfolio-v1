@@ -1,11 +1,14 @@
 import { FC, ReactElement } from 'react';
-import { SectionTitle } from '@/components/layout/SectionTitle';
 import { TechIconProps } from '@/app/components/Technologies/components/TechIcon';
 import golangSvg from '../../../../public/technologies/golang.svg';
 import typescriptSvg from '../../../../public/technologies/typescript.svg';
 import reactSvg from '../../../../public/technologies/react.svg';
 import postgresqlSvg from '../../../../public/technologies/postgresql.svg';
 import { TechList } from '@/app/components/Technologies/components/TechList';
+import { SectionCover } from '@/app/components/SectionCover';
+import { SectionProps } from '@/app/components/@types';
+import { SubMenuId } from '@/app/components/consts';
+import { SectionSubtitle } from '@/components/layout/SectionSubtitle';
 
 const currentStack: TechIconProps[] = [
     {
@@ -94,19 +97,28 @@ const currentStack: TechIconProps[] = [
     },
 ];
 
-export const Technologies: FC = (): ReactElement => {
+type TechnologiesProps = SectionProps;
+
+export const Technologies: FC<TechnologiesProps> = ({ menuId }): ReactElement => {
     return (
-        <div className="flex flex-col gap-24">
-            <div className="flex flex-col gap-8">
-                <SectionTitle>Stack Atual</SectionTitle>
+        <div id={menuId} className="flex flex-col">
+            <SectionCover
+                menuId={menuId}
+                subtitles={[SubMenuId.TechnologiesFavorite, SubMenuId.TechnologiesAlreadyUsed]}
+            />
 
-                <TechList list={currentStack} />
-            </div>
+            <div className="min-h-screen flex flex-col gap-24 pt-6">
+                <div className="flex flex-col gap-8">
+                    <SectionSubtitle subMenuId={SubMenuId.TechnologiesFavorite} />
 
-            <div className="flex flex-col gap-8">
-                <SectionTitle>Já utilizadas</SectionTitle>
+                    <TechList list={currentStack} />
+                </div>
 
-                <TechList list={currentStack} />
+                <div className="flex flex-col gap-8">
+                    <SectionSubtitle subMenuId={SubMenuId.TechnologiesAlreadyUsed} />
+
+                    <TechList list={currentStack} />
+                </div>
             </div>
         </div>
     );

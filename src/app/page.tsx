@@ -2,11 +2,11 @@ import { Home } from '@/app/components/Home';
 import { NextPage } from 'next';
 import { ReactElement, useCallback, useMemo } from 'react';
 import { Menu } from '@/app/components/Menu';
-import { MenuIds } from '@/app/components/consts';
+import { MenuId } from '@/app/components/consts';
 import { Technologies } from '@/app/components/Technologies';
 
 interface Section {
-    id: MenuIds;
+    id: MenuId;
     component: ReactElement;
 }
 
@@ -14,12 +14,12 @@ const Page: NextPage = (): ReactElement => {
     const sections: Section[] = useMemo(() => {
         return [
             {
-                id: MenuIds.Home,
-                component: <Home />,
+                id: MenuId.Home,
+                component: <Home menuId={MenuId.Home} />,
             },
             {
-                id: MenuIds.Technologies,
-                component: <Technologies />,
+                id: MenuId.Technologies,
+                component: <Technologies menuId={MenuId.Technologies} />,
             },
         ];
     }, []);
@@ -41,6 +41,7 @@ const Page: NextPage = (): ReactElement => {
                     return (
                         <section
                             key={id}
+                            id={id}
                             className={`section-content h-screen min-h-screen py-6 px-4 sm:px-20 lg:px-32 overflow-y-scroll scroll- ${getBgColor(
                                 index,
                             )}`}

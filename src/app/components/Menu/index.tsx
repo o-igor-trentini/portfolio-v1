@@ -2,7 +2,7 @@
 
 import { FC, ReactElement, ReactNode } from 'react';
 import { AddressBook, Code, Hammer, House, Info } from '@phosphor-icons/react';
-import { MenuIds } from '@/app/components/consts';
+import { MenuId } from '@/app/components/consts';
 
 interface Item {
     id: string;
@@ -14,28 +14,28 @@ interface Item {
 export const Menu: FC = (): ReactElement => {
     const items: Item[] = [
         {
-            id: MenuIds.Home,
+            id: MenuId.Home,
             label: 'Início',
             icon: <House />,
             isActive: true,
         },
         {
-            id: MenuIds.Technologies,
+            id: MenuId.Technologies,
             label: 'Tecnologias',
             icon: <Code />,
         },
         {
-            id: MenuIds.Projects,
+            id: MenuId.Projects,
             label: 'Projetos',
             icon: <Hammer />,
         },
         {
-            id: MenuIds.AboutMe,
+            id: MenuId.AboutMe,
             label: 'Sobre mim',
             icon: <Info />,
         },
         {
-            id: MenuIds.Contact,
+            id: MenuId.Contact,
             label: 'Contato',
             icon: <AddressBook />,
         },
