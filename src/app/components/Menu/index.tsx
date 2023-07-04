@@ -1,62 +1,80 @@
 'use client';
 
-import { FC, ReactElement, ReactNode } from 'react';
+import { FC, ReactElement, ReactNode, useCallback, useState } from 'react';
 import { AddressBook, Code, Hammer, House, Info } from '@phosphor-icons/react';
-import { MenuId } from '@/app/components/consts';
+import { MenuId, MenuLabel } from '@/app/components/consts';
+import Link from 'next/link';
 
 interface Item {
-    id: string;
-    label: string;
+    id: MenuId;
     icon: ReactNode;
-    isActive?: boolean;
+    isActive: boolean;
 }
 
 export const Menu: FC = (): ReactElement => {
-    const items: Item[] = [
+    const [items, setItems] = useState<Item[]>([
         {
             id: MenuId.Home,
-            label: 'Início',
             icon: <House />,
             isActive: true,
         },
         {
             id: MenuId.Technologies,
-            label: 'Tecnologias',
             icon: <Code />,
+            isActive: false,
         },
         {
             id: MenuId.Projects,
-            label: 'Projetos',
             icon: <Hammer />,
+            isActive: false,
         },
         {
             id: MenuId.AboutMe,
-            label: 'Sobre mim',
             icon: <Info />,
+            isActive: false,
         },
         {
             id: MenuId.Contact,
-            label: 'Contato',
             icon: <AddressBook />,
+            isActive: false,
         },
-    ];
+    ]);
+
+    const handleClick = useCallback((id: MenuId): void => {
+        setItems((state) => {
+            const newActiveIndex = state.findIndex((item) => item.id === id);
+
+            if (newActiveIndex > -1 && !state[newActiveIndex].isActive) {
+                const currentActiveIndex = state.findIndex(({ isActive }) => isActive);
+
+                const newState = [...state];
+                newState[currentActiveIndex] = { ...newState[currentActiveIndex], isActive: false };
+                newState[newActiveIndex] = { ...newState[newActiveIndex], isActive: true };
+
+                return newState;
+            }
+
+            return state;
+        });
+    }, []);
 
     return (
         <div className="fixed min-h-screen flex justify-center items-center">
             <div className="flex flex-row md:flex-col justify-center items-center gap-4 p-4 bg-fourth rounded-3xl">
-                {items.map(({ id, label, icon, isActive }) => {
+                {items.map(({ id, icon, isActive }) => {
                     return (
-                        <button
+                        <Link
                             key={id}
+                            href={`/#${id}`}
                             id={`btn-${id}`}
-                            title={label}
-                            type="button"
-                            className={`p-1 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
+                            title={MenuLabel[id]}
+                            className={`p-2 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
                                 isActive && 'bg-white text-primary'
                             }`}
+                            onClick={() => handleClick(id)}
                         >
                             {icon}
-                        </button>
+                        </Link>
                     );
                 })}
             </div>
