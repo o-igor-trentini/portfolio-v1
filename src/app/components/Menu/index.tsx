@@ -31,7 +31,7 @@ export const Menu: FC = (): ReactElement => {
         },
         {
             id: MenuIds.AboutMe,
-            label: 'Início',
+            label: 'Sobre mim',
             icon: <Info />,
         },
         {
@@ -42,17 +42,17 @@ export const Menu: FC = (): ReactElement => {
     ];
 
     return (
-        <div className="md:fixed px-2 md:px-0 md:min-h-screen flex flex-col justify-center items-center">
-            <div className="w-full flex flex-row md:flex-col justify-center items-center gap-4 bg-fourth rounded-3xl p-4">
+        <div className="fixed min-h-screen flex justify-center items-center">
+            <div className="flex flex-row md:flex-col justify-center items-center gap-4 p-4 bg-fourth rounded-3xl">
                 {items.map(({ id, label, icon, isActive }) => {
                     return (
                         <button
                             key={id}
-                            id={id}
+                            id={`btn-${id}`}
                             title={label}
                             type="button"
                             className={`p-1 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
-                                isActive && ' bg-white text-primary'
+                                isActive && 'bg-white text-primary'
                             }`}
                         >
                             {icon}

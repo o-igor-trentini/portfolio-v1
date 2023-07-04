@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import { SectionTitle } from '@/components/layout/SectionTitle';
-import { TechIcon, TechIconProps } from '@/app/components/Technologies/components/TechIcon';
+import { TechIconProps } from '@/app/components/Technologies/components/TechIcon';
 import golangSvg from '../../../../public/technologies/golang.svg';
 import typescriptSvg from '../../../../public/technologies/typescript.svg';
 import reactSvg from '../../../../public/technologies/react.svg';

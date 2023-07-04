@@ -7,7 +7,7 @@ interface TechListProps {
 
 export const TechList: FC<TechListProps> = ({ list }): ReactElement => {
     return (
-        <div className="w-full grid 2xl:grid-cols-12 2xl:gap-10 xl:grid-cols-10 xl:gap-8 lg:grid-cols-8 lg:gap-6 grid-cols-3 gap-8">
+        <div className="w-full grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 2xl:gap-10 place-items-center">
             {list.map((props) => {
                 return <TechIcon key={props.name} {...props} />;
             })}

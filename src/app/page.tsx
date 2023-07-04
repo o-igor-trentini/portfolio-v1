@@ -1,6 +1,6 @@
 import { Home } from '@/app/components/Home';
 import { NextPage } from 'next';
-import { FC, ReactElement, useCallback, useMemo } from 'react';
+import { ReactElement, useCallback, useMemo } from 'react';
 import { Menu } from '@/app/components/Menu';
 import { MenuIds } from '@/app/components/consts';
 import { Technologies } from '@/app/components/Technologies';
@@ -25,21 +25,26 @@ const Page: NextPage = (): ReactElement => {
     }, []);
 
     const getBgColor: (index: number) => string = useCallback((index: number): string => {
-        if (index % 2 == 0) return 'bg-blayout';
+        if (index % 2 === 0) return 'bg-blayout';
 
         return 'bg-blayout-2';
     }, []);
 
     return (
-        <main className="max-h-[100vh] md:grid md:grid-cols-12 md:grid-flow-row overflow-y-scroll flex flex-col">
-            <div className="h-24 md:h-auto md:relative flex flex-row md:flex-col justify-center md:justify-normal items-center order-last md:order-first bg-primary">
+        <main className="flex flex-col md:grid md:grid-flow-row md:grid-cols-12">
+            <div className="h-auto md:col-span-2 lg:col-span-1 flex flex-col items-center bg-primary invisible md:visible">
                 <Menu />
             </div>
 
-            <div className="h-[calc('100vh - 6rem')] md:h-auto md:col-span-11 overflow-y-scroll">
+            <div className="md:col-span-10 lg:col-span-11">
                 {sections.map(({ id, component }, index) => {
                     return (
-                        <section key={id} className={`min-h-screen py-6 px-4 lg:px-32 ${getBgColor(index)}`}>
+                        <section
+                            key={id}
+                            className={`section-content h-screen min-h-screen py-6 px-4 sm:px-20 lg:px-32 overflow-y-scroll scroll- ${getBgColor(
+                                index,
+                            )}`}
+                        >
                             {component}
                         </section>
                     );
