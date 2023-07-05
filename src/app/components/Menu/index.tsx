@@ -5,6 +5,7 @@ import { AddressBook, Code, Hammer, House, Info } from '@phosphor-icons/react';
 import { MenuId, MenuLabel } from '@/app/components/consts';
 import Link from 'next/link';
 import { resetScrollTop } from '@/utils';
+import { Tooltip } from '@/components/ui/Tooltip';
 
 interface Item {
     id: MenuId;
@@ -72,18 +73,18 @@ export const Menu: FC = (): ReactElement => {
             <div className="flex flex-row md:flex-col justify-center items-center gap-4 p-4 bg-fourth rounded-3xl">
                 {items.map(({ id, icon, isActive }) => {
                     return (
-                        <Link
-                            key={id}
-                            href={`/#${id}`}
-                            id={`btn-${id}`}
-                            title={MenuLabel[id]}
-                            className={`p-2 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
-                                isActive && 'bg-white text-primary'
-                            }`}
-                            onClick={() => handleClick(id)}
-                        >
-                            {icon}
-                        </Link>
+                        <Tooltip key={id} title={MenuLabel[id]} placement="right">
+                            <Link
+                                href={`/#${id}`}
+                                id={`btn-${id}`}
+                                className={`p-2 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
+                                    isActive && 'bg-white text-primary'
+                                }`}
+                                onClick={() => handleClick(id)}
+                            >
+                                {icon}
+                            </Link>
+                        </Tooltip>
                     );
                 })}
             </div>
