@@ -15,7 +15,7 @@ const Page: NextPage = (): ReactElement => {
         return [
             {
                 id: MenuId.Home,
-                component: <Home menuId={MenuId.Home} />,
+                component: <Home />,
             },
             {
                 id: MenuId.Technologies,

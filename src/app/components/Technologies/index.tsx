@@ -101,7 +101,7 @@ type TechnologiesProps = SectionProps;
 
 export const Technologies: FC<TechnologiesProps> = ({ menuId }): ReactElement => {
     return (
-        <div id={menuId} className="flex flex-col">
+        <div className="flex flex-col">
             <SectionCover
                 menuId={menuId}
                 subtitles={[SubMenuId.TechnologiesFavorite, SubMenuId.TechnologiesAlreadyUsed]}

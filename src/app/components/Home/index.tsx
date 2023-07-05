@@ -4,16 +4,10 @@ import { Description } from '@/app/components/Home/components/Description';
 import { Card } from '@/components/ui/Card';
 import profilePng from '../../../../public/profile.png';
 import Image from 'next/image';
-import { SectionProps } from '@/app/components/@types';
 
-type HomeProps = SectionProps;
-
-export const Home: FC<HomeProps> = ({ menuId }): ReactElement => {
+export const Home: FC = (): ReactElement => {
     return (
-        <div
-            id={menuId}
-            className="w-full h-full lg:relative flex flex-col lg:flex-row items-center justify-start gap-4 lg:gap-0"
-        >
+        <div className="w-full h-full lg:relative flex flex-col lg:flex-row items-center justify-start gap-4 lg:gap-0">
             <div className="lg:absolute lg:z-10 lg:left-[6%] xl:left-[20%]">
                 <Image
                     src={profilePng}
