@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import { TechIcon, TechIconProps } from '@/app/components/Technologies/components/TechIcon';
+import { TechIcon, TechIconProps } from '@/app/components/Sections/Technologies/components/TechIcon';
 
 interface TechListProps {
     list: TechIconProps[];

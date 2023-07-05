@@ -1,5 +1,5 @@
-import { TechIconProps } from '@/app/components/Technologies/components/TechIcon';
-import { TechsSvg } from '../../../../public/technologies';
+import { TechIconProps } from '@/app/components/Sections/Technologies/components/TechIcon';
+import { TechsSvg } from '../../../../../public/images/technologies';
 
 export enum TechTag {
     ProgrammingLanguage = 'programming-language',

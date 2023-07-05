@@ -1,10 +1,10 @@
 import { FC, ReactElement } from 'react';
-import { TechList } from '@/app/components/Technologies/components/TechList';
-import { SectionCover } from '@/app/components/SectionCover';
-import { SectionProps } from '@/app/components/@types';
+import { SectionProps } from '@/@types';
 import { SubMenuId } from '@/app/components/consts';
 import { SectionSubtitle } from '@/components/layout/SectionSubtitle';
-import { favoriteTechs, techs } from '@/app/components/Technologies/consts';
+import { TechList } from '@/app/components/Sections/Technologies/components/TechList';
+import { favoriteTechs, techs } from '@/app/components/Sections/Technologies/consts';
+import { SectionCover } from '@/app/components/Sections/components/SectionCover';
 
 type TechnologiesProps = SectionProps;
 

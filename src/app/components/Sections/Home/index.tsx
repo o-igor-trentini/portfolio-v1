@@ -1,9 +1,9 @@
 import { FC, ReactElement } from 'react';
-import { SocialNetworks } from '@/app/components/Home/components/SocialNetworks';
-import { Description } from '@/app/components/Home/components/Description';
 import { Card } from '@/components/ui/Card';
-import profilePng from '../../../../public/profile.png';
+import profilePng from '../../../../../public/images/profile.png';
 import Image from 'next/image';
+import { Description } from '@/app/components/Sections/Home/components/Description';
+import { SocialNetworks } from '@/app/components/Sections/Home/components/SocialNetworks';
 
 export const Home: FC = (): ReactElement => {
     return (

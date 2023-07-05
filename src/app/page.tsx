@@ -1,9 +1,9 @@
-import { Home } from '@/app/components/Home';
-import { NextPage } from 'next';
-import { ReactElement, useCallback, useMemo } from 'react';
-import { Menu } from '@/app/components/Menu';
 import { MenuId } from '@/app/components/consts';
-import { Technologies } from '@/app/components/Technologies';
+import { ReactElement, useCallback, useMemo } from 'react';
+import { NextPage } from 'next';
+import { Home } from '@/app/components/Sections/Home';
+import { Technologies } from '@/app/components/Sections/Technologies';
+import { Menu } from '@/app/components/Sections/Menu';
 
 interface Section {
     id: MenuId;
