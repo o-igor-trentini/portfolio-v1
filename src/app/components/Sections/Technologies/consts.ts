@@ -1,5 +1,5 @@
 import { TechIconProps } from '@/app/components/Sections/Technologies/components/TechIcon';
-import { TechsSvg } from '../../../../../public/images/technologies';
+import { TechImages } from '../../../../../public/images/technologies';
 
 export enum TechTag {
     ProgrammingLanguage = 'programming-language',
@@ -15,127 +15,127 @@ export enum TechTag {
 export const techs: TechIconProps[] = [
     {
         name: 'Bitbucket',
-        iconSrc: TechsSvg.Bitbucket,
+        iconSrc: TechImages.Bitbucket,
         tags: [TechTag.Platform],
     },
     {
         name: 'CSS',
-        iconSrc: TechsSvg.Css,
+        iconSrc: TechImages.Css,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'Docker',
-        iconSrc: TechsSvg.Docker,
+        iconSrc: TechImages.Docker,
         tags: [TechTag.ProgrammingLanguageService],
     },
     {
         name: 'Git',
-        iconSrc: TechsSvg.Git,
+        iconSrc: TechImages.Git,
         tags: [TechTag.ProgrammingLanguageService],
     },
     {
         name: 'GitHub',
-        iconSrc: TechsSvg.GitHub,
+        iconSrc: TechImages.GitHub,
         tags: [TechTag.Platform],
     },
     {
         name: 'Golang',
-        iconSrc: TechsSvg.Golang,
+        iconSrc: TechImages.Golang,
         favorite: true,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'HTML',
-        iconSrc: TechsSvg.Html,
+        iconSrc: TechImages.Html,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'Javascript',
-        iconSrc: TechsSvg.Javascript,
+        iconSrc: TechImages.Javascript,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'JetBrains',
-        iconSrc: TechsSvg.JetBrains,
+        iconSrc: TechImages.JetBrains,
         favorite: true,
         tags: [TechTag.IDE],
     },
     {
         name: 'Jira',
-        iconSrc: TechsSvg.Jira,
+        iconSrc: TechImages.Jira,
         tags: [TechTag.Platform],
     },
     {
         name: 'Linux',
-        iconSrc: TechsSvg.Linux,
+        iconSrc: TechImages.Linux,
         favorite: true,
         tags: [TechTag.OperationalSystem],
     },
     {
         name: 'NextJS',
-        iconSrc: TechsSvg.NextJs,
+        iconSrc: TechImages.NextJs,
         favorite: true,
         tags: [TechTag.Framework],
     },
     {
         name: 'NodeJS',
-        iconSrc: TechsSvg.NodeJs,
+        iconSrc: TechImages.NodeJs,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'NPM',
-        iconSrc: TechsSvg.Npm,
+        iconSrc: TechImages.Npm,
         tags: [TechTag.Platform],
     },
     {
         name: 'PHP',
-        iconSrc: TechsSvg.Php,
+        iconSrc: TechImages.Php,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'PostgreSQL',
-        iconSrc: TechsSvg.PostgreSql,
+        iconSrc: TechImages.PostgreSql,
         favorite: true,
         tags: [TechTag.Database],
     },
     {
         name: 'ReactJS',
-        iconSrc: TechsSvg.ReactJs,
+        iconSrc: TechImages.ReactJs,
         favorite: true,
         tags: [TechTag.Framework],
     },
     {
         name: 'Slack',
-        iconSrc: TechsSvg.Slack,
+        iconSrc: TechImages.Slack,
         favorite: true,
         tags: [TechTag.Platform],
     },
     {
         name: 'Storybook',
-        iconSrc: TechsSvg.Storybook,
+        iconSrc: TechImages.Storybook,
         tags: [TechTag.Library],
     },
     {
         name: 'TailwindCSS',
-        iconSrc: TechsSvg.TailwindCss,
+        iconSrc: TechImages.TailwindCss,
         favorite: true,
         tags: [TechTag.Library],
     },
     {
         name: 'Typescript',
-        iconSrc: TechsSvg.Typescript,
+        iconSrc: TechImages.Typescript,
         favorite: true,
         tags: [TechTag.ProgrammingLanguage],
     },
     {
         name: 'Ubuntu',
-        iconSrc: TechsSvg.Ubuntu,
+        iconSrc: TechImages.Ubuntu,
         favorite: true,
         tags: [TechTag.OperationalSystem],
     },
     {
         name: 'VS Code',
-        iconSrc: TechsSvg.VsCode,
+        iconSrc: TechImages.VsCode,
         tags: [TechTag.IDE],
     },
 ];

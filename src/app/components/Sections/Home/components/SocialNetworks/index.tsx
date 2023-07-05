@@ -11,7 +11,7 @@ interface Images {
 }
 
 export const SocialNetworks: FC = (): ReactElement => {
-    const iconClassName = 'w-8 h-8 fill-third cursor-pointer hover:fill-secondary transition duration-300 ease-in-out';
+    const iconClassName = 'w-8 h-8 fill-third cursor-pointer hover:fill-secondary transition duration ease-in-out';
 
     const images: Images[] = [
         {

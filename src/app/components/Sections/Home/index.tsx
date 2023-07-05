@@ -20,7 +20,7 @@ export const Home: FC = (): ReactElement => {
 
             <div className="lg:w-[60%] xl:w-[45%] lg:z-0 flex flex-col content-center lg:ml-[calc(6%+15rem)] xl:ml-[calc(20%+15rem)]">
                 <Card className="lg:pl-24 xl:pl-32 border-fourth border-b-4">
-                    <div className="w-full flex flex-col gap-4 items-center lg:items-start">
+                    <div className="w-full flex flex-col gap-4 items-center lg:items-start px-12 lg:px-0">
                         <Description />
 
                         <SocialNetworks />

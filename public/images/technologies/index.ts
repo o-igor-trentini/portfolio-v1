@@ -22,7 +22,7 @@ import typescriptSvg from './typescript.svg';
 import ubuntuSvg from './ubuntu.svg';
 import vscodeSvg from './vscode.svg';
 
-export const TechsSvg = {
+export const TechImages = {
     Bitbucket: bitbucketSvg,
     Css: cssSvg,
     Docker: dockerSvg,

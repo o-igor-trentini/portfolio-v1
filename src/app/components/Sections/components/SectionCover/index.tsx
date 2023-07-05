@@ -23,7 +23,7 @@ export const SectionCover: FC<SectionCoverProps> = ({ menuId, subtitles }): Reac
                             <Link key={text} href={`/#${text}`} target="_parent" className="flex items-center gap-4">
                                 <ArrowCircleRight className="w-6 h-6 text-secondary" />
 
-                                <Title level={4} className="text-lg md:text-2xl text-tprimary font-mono">
+                                <Title level={4} className="text-md md:text-2xl text-tprimary font-mono">
                                     {SubMenuLabel[text]}
                                 </Title>
                             </Link>

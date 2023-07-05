@@ -1,7 +1,7 @@
 import { FC, ReactElement } from 'react';
 import Image from 'next/image';
-import { TechTag } from '@/app/components/Technologies/consts';
 import { Tooltip } from '@/components/ui/Tooltip';
+import { TechTag } from '@/app/components/Sections/Technologies/consts';
 
 export interface TechIconProps {
     name: string;

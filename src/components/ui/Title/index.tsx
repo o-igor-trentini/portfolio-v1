@@ -13,7 +13,7 @@ export const Title: FC<TitleProps> = ({ children, level, ...props }): ReactEleme
         '3': (
             <h3
                 {...props}
-                className={props.className ?? 'text-5xl md:text-7xl text-primary font-bold lg:text-left text-left'}
+                className={props.className ?? 'text-6xl md:text-8xl text-primary font-bold lg:text-left text-left'}
             >
                 {children}
             </h3>

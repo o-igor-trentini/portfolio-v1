@@ -77,7 +77,7 @@ export const Menu: FC = (): ReactElement => {
                             <Link
                                 href={`/#${id}`}
                                 id={`btn-${id}`}
-                                className={`p-2 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration-300 ease-in-out ${
+                                className={`p-2 rounded-3xl text-5xl cursor-pointer hover:text-secondary transition duration ease-in-out ${
                                     isActive && 'bg-white text-primary'
                                 }`}
                                 onClick={() => handleClick(id)}

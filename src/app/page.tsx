@@ -4,6 +4,7 @@ import { NextPage } from 'next';
 import { Home } from '@/app/components/Sections/Home';
 import { Technologies } from '@/app/components/Sections/Technologies';
 import { Menu } from '@/app/components/Sections/Menu';
+import { Projects } from '@/app/components/Sections/Projects';
 
 interface Section {
     id: MenuId;
@@ -21,6 +22,10 @@ const Page: NextPage = (): ReactElement => {
                 id: MenuId.Technologies,
                 component: <Technologies menuId={MenuId.Technologies} />,
             },
+            {
+                id: MenuId.Projects,
+                component: <Projects menuId={MenuId.Projects} />,
+            },
         ];
     }, []);
 
@@ -31,12 +36,12 @@ const Page: NextPage = (): ReactElement => {
     }, []);
 
     return (
-        <main className="flex flex-col md:grid md:grid-flow-row md:grid-cols-12">
-            <div className="h-auto md:col-span-2 lg:col-span-1 flex flex-col items-center bg-primary invisible md:visible">
+        <main className="flex flex-col xl:grid xl:grid-flow-row xl:grid-cols-12">
+            <div className="h-auto xl:col-span-1 flex flex-col items-center bg-primary invisible xl:visible">
                 <Menu />
             </div>
 
-            <div className="md:col-span-10 lg:col-span-11">
+            <div className="xl:col-span-11">
                 {sections.map(({ id, component }, index) => {
                     return (
                         <section
