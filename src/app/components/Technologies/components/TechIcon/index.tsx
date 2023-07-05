@@ -1,9 +1,12 @@
 import { FC, ReactElement } from 'react';
 import Image from 'next/image';
+import { TechTag } from '@/app/components/Technologies/consts';
 
 export interface TechIconProps {
     name: string;
     iconSrc: string;
+    favorite?: boolean;
+    tags: TechTag[];
 }
 
 export const TechIcon: FC<TechIconProps> = ({ name, iconSrc }): ReactElement => {
