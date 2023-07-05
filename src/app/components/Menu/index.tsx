@@ -4,6 +4,7 @@ import { FC, ReactElement, ReactNode, useCallback, useState } from 'react';
 import { AddressBook, Code, Hammer, House, Info } from '@phosphor-icons/react';
 import { MenuId, MenuLabel } from '@/app/components/consts';
 import Link from 'next/link';
+import { resetScrollTop } from '@/utils';
 
 interface Item {
     id: MenuId;
@@ -40,23 +41,31 @@ export const Menu: FC = (): ReactElement => {
         },
     ]);
 
-    const handleClick = useCallback((id: MenuId): void => {
-        setItems((state) => {
-            const newActiveIndex = state.findIndex((item) => item.id === id);
+    const resetSectionScroll = useCallback((id: MenuId): void => resetScrollTop(id), []);
 
-            if (newActiveIndex > -1 && !state[newActiveIndex].isActive) {
-                const currentActiveIndex = state.findIndex(({ isActive }) => isActive);
+    const handleClick = useCallback(
+        (id: MenuId): void =>
+            setItems((state) => {
+                const newActiveIndex = state.findIndex((item) => item.id === id);
 
-                const newState = [...state];
-                newState[currentActiveIndex] = { ...newState[currentActiveIndex], isActive: false };
-                newState[newActiveIndex] = { ...newState[newActiveIndex], isActive: true };
+                if (newActiveIndex > -1) {
+                    resetSectionScroll(state[newActiveIndex].id);
 
-                return newState;
-            }
+                    if (state[newActiveIndex].isActive) return state;
 
-            return state;
-        });
-    }, []);
+                    const currentActiveIndex = state.findIndex(({ isActive }) => isActive);
+
+                    const newState = [...state];
+                    newState[currentActiveIndex] = { ...newState[currentActiveIndex], isActive: false };
+                    newState[newActiveIndex] = { ...newState[newActiveIndex], isActive: true };
+
+                    return newState;
+                }
+
+                return state;
+            }),
+        [resetSectionScroll],
+    );
 
     return (
         <div className="fixed min-h-screen flex justify-center items-center">
