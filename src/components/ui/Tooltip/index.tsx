@@ -14,8 +14,8 @@ interface TooltipProps {
 
 export const Tooltip: FC<TooltipProps> = ({ children, title, placement }): ReactElement => {
     return (
-        <RadixTooltip.Provider>
-            <RadixTooltip.Root delayDuration={250}>
+        <RadixTooltip.Provider delayDuration={250}>
+            <RadixTooltip.Root>
                 <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
 
                 <RadixTooltip.Portal>
