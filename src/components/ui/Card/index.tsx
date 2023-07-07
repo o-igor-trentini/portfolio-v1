@@ -7,6 +7,8 @@ interface CardProps {
     hoverable?: boolean;
     className?: string;
     onClick?: () => void;
+    onMouseEnter?: () => void;
+    onMouseOut?: () => void;
 }
 
 export const Card: FC<CardProps> = ({
@@ -16,6 +18,8 @@ export const Card: FC<CardProps> = ({
     hoverable = false,
     className,
     onClick,
+    onMouseEnter,
+    onMouseOut,
 }): ReactElement => {
     let cName = '';
 
@@ -25,7 +29,12 @@ export const Card: FC<CardProps> = ({
     if (hoverable) cName += ' cursor-pointer';
 
     return (
-        <div onClick={onClick} className={'rounded-3xl overflow-hidden  bg-white' + cName}>
+        <div
+            onMouseEnter={onMouseEnter}
+            onMouseOut={onMouseOut}
+            onClick={onClick}
+            className={'rounded-3xl overflow-hidden  bg-white' + cName}
+        >
             {children}
         </div>
     );

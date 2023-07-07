@@ -7,7 +7,7 @@ interface ProjectListProps {
 
 export const ProjectList: FC<ProjectListProps> = ({ list }): ReactElement => {
     return (
-        <div className="w-full grid grid-cols-3 gap-4 place-items-center">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 place-items-center">
             {list.map((props) => {
                 return <ProjectCard key={props.name} data={props} />;
             })}
