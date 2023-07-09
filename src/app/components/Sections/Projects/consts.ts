@@ -17,8 +17,8 @@ export const personalProjects: Project[] = [
     },
     {
         name: 'Ignite Timer',
-        url: '',
-        imageUrl: PersonalProjectsImages.IgniteCoffeeDelivery,
+        url: 'https://o-igor-trentini.github.io/ignite-timer/',
+        imageUrl: PersonalProjectsImages.IgniteTimer,
     },
     {
         name: 'Ignite GitHub Blog',
