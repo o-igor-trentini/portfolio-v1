@@ -37,7 +37,7 @@ const Page: NextPage = (): ReactElement => {
 
     return (
         <main className="flex flex-col xl:grid xl:grid-flow-row xl:grid-cols-12">
-            <div className="h-auto xl:col-span-1 flex flex-col items-center bg-primary invisible xl:visible">
+            <div className="h-auto xl:col-span-1 flex flex-col items-center bg-fourth invisible xl:visible">
                 <Menu />
             </div>
 
