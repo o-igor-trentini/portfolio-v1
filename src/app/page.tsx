@@ -29,11 +29,10 @@ const Page: NextPage = (): ReactElement => {
         ];
     }, []);
 
-    const getBgColor: (index: number) => string = useCallback((index: number): string => {
-        if (index % 2 === 0) return 'bg-blayout';
-
-        return 'bg-blayout-2';
-    }, []);
+    const getBgColor: (index: number) => string = useCallback(
+        (index: number): string => (index % 2 === 0 ? 'bg-blayout' : 'bg-blayout-2'),
+        [],
+    );
 
     return (
         <main className="flex flex-col xl:grid xl:grid-flow-row xl:grid-cols-12">
