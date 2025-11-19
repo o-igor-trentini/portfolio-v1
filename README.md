@@ -1,3 +1,13 @@
+# ⚠️ AVISO IMPORTANTE / IMPORTANT NOTICE
+
+**🇧🇷 Português:**
+Este portfólio **não foi finalizado** e está **depreciado**. Uma nova versão (v2) será desenvolvida no repositório [o-igor-trentini/portfolio-v2](https://github.com/o-igor-trentini/portfolio-v2).
+
+**🇺🇸 English:**
+This portfolio **is not finished** and is **deprecated**. A new version (v2) will be developed in the repository [o-igor-trentini/portfolio-v2](https://github.com/o-igor-trentini/portfolio-v2).
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
